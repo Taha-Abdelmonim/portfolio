@@ -57,28 +57,29 @@ var boxInfo = document.querySelector(".box-info");
 });
 
 ["mouseup", "touchend"].forEach(function (e) {
-  document.addEventListener(
+  boxInfo.addEventListener(
     e,
     function () {
       boxInfo.classList.remove("move");
-      document.body.style.overflowY = "inherit";
       isDown = false;
+      document.body.style.overflowY = "inherit";
     },
     true
   );
 });
-document.addEventListener("touchmove", handleTouchMove, false);
+boxInfo.addEventListener("touchmove", handleTouchMove, false);
 
 function handleTouchMove(e) {
+  e.stopPropagation();
   if (e.touches.length == 1) {
     if (target === boxInfo) {
+      document.body.style.overflowY = "clip";
       moveDrag(e);
     }
   }
 }
 
 function moveDrag(e) {
-  document.body.style.overflowY = "clip";
   var touch = e.touches[0];
   mousePosition = {
     x: touch.pageX,
@@ -89,7 +90,7 @@ function moveDrag(e) {
     rotateY(${mousePosition.x + "deg"})`;
 }
 
-document.addEventListener(
+boxInfo.addEventListener(
   "mousemove",
   function (event) {
     // boxInfo.style.left = `${window.innerWidth - 500 / 2}px`;
@@ -411,7 +412,7 @@ let updateVisitCount = () => {
       websiteContainer.innerHTML = res.value;
     });
 };
-// updateVisitCount();
+updateVisitCount();
 // Start Input Check
 let inputCheck = document.querySelector(".input-toggle-check");
 

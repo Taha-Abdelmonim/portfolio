@@ -54,9 +54,11 @@ $(function () {
   $(window).on("dblclick", function () {
     bool = !bool;
     if (bool) {
-      ele.prependTo("body");
-    } else {
       $(".trail").detach();
+      $(".trail").css("display", "none");
+    } else {
+      ele.prependTo("body");
+      $(".trail").css("display", "block");
     }
   });
 });

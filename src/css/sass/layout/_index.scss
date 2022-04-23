@@ -24,6 +24,9 @@ body {
   animation: back-mouse-move 5s linear infinite;
   border-radius: 50%;
 }
+.trail {
+  display: none;
+}
 .pointer1 {
   transition: 0.01s;
 }
@@ -392,7 +395,7 @@ section.aside-nav {
     position: fixed;
     width: 0;
     height: 3px;
-    background: var(--main-color1);
+    background: #00fff1;
     z-index: 12;
     transition: var(--transition);
   }
@@ -612,7 +615,6 @@ section.aside-nav {
   }
 }
 /* Start Home */
-
 $width: 250px;
 $height: 250px;
 main.content {

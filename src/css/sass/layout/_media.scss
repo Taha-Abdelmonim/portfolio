@@ -92,6 +92,7 @@
       left: -150px;
       top: -71px;
     }
+    
     // End Kamar
     width: 100%;
     .main-about {
@@ -121,9 +122,60 @@
         }
       }
     }
+    $width: 150px;
+    $height: 150px;
     .container.home-box {
       .box-info {
-        left: 48px;
+        left: 85px;
+        width: $width;
+        height: $height;
+        .card-box {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          img {
+            width: 100px;
+            margin-top: -20px;
+          }
+          p {
+            font-size: 10px;
+          }
+        }
+        .front {
+          transform: translateZ(calc($width / 2));
+          background: radial-gradient(#101d42, #2176ae, #a9fff7, #033860, #219ebc);
+          color: #000;
+        }
+        .back {
+          transform: translateZ(calc($width / -2)) rotateY(180deg);
+          background: linear-gradient(to right, #10002b, #3c096c, #9d4edd, #e0aaff);
+          color: #00dcff;
+        }
+        .left {
+          transform: rotateY(90deg) translateZ(calc($width / 2));
+          background: radial-gradient(
+            var(--main-color1),
+            var(--main-color2),
+            var(--main-color3),
+            var(--main-color4),
+            var(--main-color5)
+          );
+          color: #000;
+        }
+        .right {
+          transform: rotateY(90deg) translateZ(calc($width / -2)) rotateY(180deg);
+          background: linear-gradient(to right, #2d00f7, #b100e8, #db00b6, #f20089);
+          color: powderblue;
+        }
+        .top {
+          transform: rotateX(90deg) translateZ(calc($width / 2));
+          background: radial-gradient(#38b000, #70e000, #38b000, #004b23, #006400, #007200);
+          color: mintcream;
+        }
+        .bottom {
+          transform: rotateX(90deg) translateZ(calc($width / -2)) rotateX(180deg);
+          background: radial-gradient(#ffc4d6, #ff87ab, #ff5d8f, #ffacc5);
+          color: darkblue;
+        }
       }
       .type-write {
         top: 108%;
@@ -250,4 +302,6 @@
       font-size: 20px !important;
     }
   }
+  $width: 250px;
+  $height: 250px;
 }
