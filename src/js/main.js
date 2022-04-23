@@ -185,6 +185,8 @@ let getRepos = () => {
         ) {
         } else if (repo.name === "Courses") {
           createRepo(repo, `https://courses-xi.vercel.app/`);
+        } else if (repo.name === "portfolio") {
+          createRepo(repo, `https://portfolio-taha-abdelmonim.vercel.app/`);
         } else {
           createRepo(repo, `https://taha-abdelmonim.github.io/${repo.name}`);
         }
