@@ -1,0 +1,43 @@
+{
+  "name": "webpack5",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack serve --config ./webpackConfig/webpack.config.js --env env=dev --progress",
+    "start": "webpack --config ./webpackConfig/webpack.config.js --env env=dev --progress",
+    "prod": "webpack --config ./webpackConfig/webpack.config.js --env env=prod --progress"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.4",
+    "axios": "^0.26.1",
+    "file-loader": "^6.2.0",
+    "image-webpack-loader": "^8.1.0",
+    "postcss-loader": "^6.2.1",
+    "sass": "^1.49.9",
+    "sass-loader": "^12.6.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4",
+    "webpack-merge": "^5.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.16.4",
+    "babel-loader": "^8.2.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^10.2.4",
+    "css-loader": "^6.5.1",
+    "glob": "^7.2.0",
+    "html-loader": "^3.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "optimize-css-assets-webpack-plugin": "^6.0.1",
+    "pug": "^3.0.2",
+    "pug-loader": "^2.4.0",
+    "style-loader": "^3.3.1",
+    "webp-loader": "^0.6.0"
+  }
+}

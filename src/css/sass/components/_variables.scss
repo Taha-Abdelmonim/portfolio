@@ -1,0 +1,66 @@
+:root {
+  // Color
+  --main-color1: #ffe169;
+  --main-color2: #edc531;
+  --main-color3: #c9a227;
+  --main-color4: #926c15;
+  --main-color5: #76520e;
+  // New variables
+  --transition: all 0.3s;
+  --main-padding: 50px;
+}
+body.green {
+  --main-color1: #ccff33;
+  --main-color2: #9ef01a;
+  --main-color3: #38b000;
+  --main-color4: #007200;
+  --main-color5: #006400;
+}
+body.pink {
+  --main-color1: #ff0072;
+  --main-color2: #ff5ca5;
+  --main-color3: #ffb9d8;
+  --main-color4: #f26a8d;
+  --main-color5: #dd2d4a;
+}
+body.blue {
+  --main-color1: #e2fdff;
+  --main-color2: #80ffe8;
+  --main-color3: #73fbd3;
+  --main-color4: #9ee493;
+  --main-color5: #a5be00;
+}
+body.linear {
+  --main-color1: #70d6ff;
+  --main-color2: #ff70a6;
+  --main-color3: #ff9770;
+  --main-color4: #ffd670;
+  --main-color5: #e9ff70;
+}
+body.cairo {
+  font-family: "Cairo", sans-serif;
+}
+body.oswald {
+  font-family: "Oswald", sans-serif;
+}
+body.abril {
+  font-family: "Abril Fatface", cursive;
+}
+body.monda {
+  font-family: "Monda", sans-serif;
+}
+body.courgette {
+  font-family: "Courgette", cursive;
+}
+
+
+// body.dark {
+// }
+$main-page: "home";
+$enable-negative-margins: true;
+$maxMobile: "(max-width: 767px)";
+$minSmall: "(min-width: 768px)";
+$minMedium: "(min-width: 992px)";
+$maxMedium: "(max-width: 992px)";
+$minLarge: "(min-width: 1200px)";
+$maxLarge: "(max-width: 1200px)";

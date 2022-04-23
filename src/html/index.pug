@@ -1,0 +1,385 @@
+mixin skills(lang, percent, speed)
+  .col-12.col-md-6.col-lg-4.d-flex.justify-content-center.align-items-center.py-3
+    .card-box.d-grid.justify-content-center.align-items-center.text-center.rounded-circle
+      .box
+        .percent.rounded-circle
+          svg
+            circle(cx="70" cy="70" r="70")
+            circle(id="circle" cx="70" cy="70" r="70" data-percent=percent data-speed=speed)
+          .number.position-absolute.top-0.start-0.w-100.h-100.d-flex.justify-content-center.align-items-center.rounded-circle
+            h2.fw-bold.fs-2(data-percent=percent data-speed=speed) %
+          h2.text.fw-bold.fs-5.mt-3= lang
+doctype html
+html(lang="en")
+  head
+    include pug/includes/meta
+    title Portfolio
+    include pug/includes/styles
+  body.position-relative(data-bs-spy="scroll" data-bs-target="#navbar"  data-bs-offset="100")
+    .trail
+      span.pointer.pointer1
+      span.pointer.pointer2
+      span.pointer.pointer3
+      span.pointer.pointer4
+      span.pointer.pointer5
+    // Start Full Page
+    main.full-page
+      - 
+        var textInfo = [
+          "In this section, I briefly explained the content of the CV and made some animations to make the site look better, including the typewriter, and it displays information about me", 
+          "full stack Developer from Giza, Egypt. I was born on July 24, 2000, I am a full stack web developer and student at El Madina Institute in Shabramant, I started learning and practicing web development in 2019, I love programming since I was young", 
+          "Ola and my friends worked on some projects through github and we used github action and I worked on more than 30 projects on my own and more than 60 ideas and you can see this on my gthub account called repo tips and triks", 
+          "Seo, Clean Code, Development, Responsive Design, Creative Work, Support, host, Domain, Test", 
+          "HTML/HTM5, CSS/CSS3, JAVASCRIPT, SASS, BOOTSTRAP, JQUERY, API, PUG.JS, WEBPACK, JS(ES6, Dom, Bom), AJAX, JSON, GIT&GITHUB, REACT.JS, REDUX, GULP, SEO, SVG, PHP,  LARAVEL, MySQL Database", 
+          ["(+20) 1090770686", "Egypt, Giza, Saqqara", "taha.abdelmoonim@gmail.com", "https://github.com/Taha-Abdelmonim", "https://www.linkedin.com/in/taha-abdelmoneim-2528361b1/", "https://www.facebook.com/taha.abdelmooneim"]
+        ]
+      - var elementsPage = ["Home", "About", "Work Gallery", "Services", "Skills", "Contact Me"]
+      .stars-box
+        .stars1
+        .stars2
+      section.aside-nav.position-absolute.top-0.w-100.d-flex
+        button.scroll-up(type="button") Up
+        span.bar-scroll
+        // Start Header
+        header
+          .form-check.form-switch
+            input.form-check-input.input-toggle-check(type="checkbox" role="switch" id="flexSwitchCheckChecked")
+          nav.navbar.navbar-expand-md.navbar-dark.fixed-top#navbar
+            .container
+              a.navbar-brand.mx-5.fw-bold(href='')
+                | Developer
+                img.ms-3.lazyload(data-src='../assets/logo.png', alt='', width='35px')
+              button.navbar-toggler(data-bs-toggle='collapse', data-bs-target='#navLinks')
+                span.navbar-toggler-icon
+              #navLinks.collapse.navbar-collapse.text-center.links-navbar
+                ul.navbar-nav.ms-auto
+                  each element, index in elementsPage
+                    if index == 0
+                      li.nav-item: a.fw-bold(class="nav-link" href=`#${elementsPage[index].slice(0, 1).toLowerCase()}${elementsPage[index].slice(1)}` role="button")=elementsPage[index]
+                    else if index == 2
+                      li.nav-item: a.fw-bold(class="nav-link" href="#gallery" role="button")=elementsPage[index]
+                    else if index == 5
+                      li.nav-item: a.fw-bold(class="nav-link" href="#contact" role="button")=elementsPage[index]
+                    else
+                      li.nav-item: a.fw-bold(class="nav-link" href=`#${elementsPage[index].slice(0, 1).toLowerCase()}${elementsPage[index].slice(1)}` role="button")=elementsPage[index]
+        // End Header
+        // Start Sidebar
+        aside.sidebar.position-fixed.p-3.float-start.vh-100.flex-shrink-0
+          
+          .icon-toggle-sidebar.position-absolute(role="button")
+            i.fa.fa-exchange.fa-lg.toggle-sidebar
+          .overflow.overflow-hidden.con-nav
+            article.overflow-hidden
+              .logo-area.text-center.mb-2.mt-4
+                figure 
+                  img.lazyload(data-src="../assets/01.jpg" alt="" class="sss img-fluid w-75 rounded-circle me-3 p-2")
+                  figcaption.text-nowrap.w-100.mt-4.position-relative.fw-bold.fs-4(data-text="Taha Abdelmoneim") Taha Abdelmoneim
+            .links-area 
+              a.text-decoration-none.fs-5.d-block(href="https://github.com/Taha-Abdelmonim" target="_blank") Github
+              a.text-decoration-none.fs-5.d-block(href="https://codepen.io/tahaabdelmonim" target="_blank") CodePen
+              a.text-decoration-none.fs-5.d-block.my-2(href="https://www.linkedin.com/in/taha-abdelmoneim-2528361b1" target="_blank") Linkedin
+              a.text-decoration-none.fs-5.d-block.my-2(href="https://www.facebook.com/taha.abdelmooneim/" target="_blank") Facebook
+              a.text-decoration-none.fs-5.d-block.my-2(href="mailto:taha.abdelmoonim@gmail.com") Email
+              a.text-decoration-none.fs-5.d-block.my-2(href="https://goo.gl/maps/BnwStUeNpWLaBo5f9" target="_blank") Location
+              a.text-decoration-none.fs-5.d-block.my-2(href="tel: +201090770686" title="(+20) 1090770686") Phone
+              a.text-decoration-none.fs-5.d-block.my-2(href="https://drive.google.com/u/0/uc?id=1vomlFIKWJL_omE7i97bpVvumjWfJWqww&export=download") Download CV
+              a.text-decoration-none.fs-5.d-block.my-2 (+20) 1090770686
+              a.text-decoration-none.fs-5.d-block.my-2 Saqqara, Badrashin Center, Giza, Egypt
+        // End Sidebar
+        // Start Links Right
+        section.links-right 
+          nav.navbar.navbar-expand-md.navbar-dark.position-fixed#links-right 
+            .container
+              #navLinks.collapse.navbar-collapse.text-center.links-navbar.nav-right
+                ul.navbar-nav.ms-auto.flex-column.overflow-hidden
+                  each element, index in elementsPage
+                    if index == 0
+                      li.nav-item: a.fw-bold(class="nav-link" href=`#${elementsPage[index].slice(0, 1).toLowerCase()}${elementsPage[index].slice(1)}` role="button")=elementsPage[index]
+                    else if index == 2
+                      li.nav-item: a.fw-bold(class="nav-link" href="#gallery" role="button") Gallery
+                    else if index == 5
+                      li.nav-item: a.fw-bold(class="nav-link" href="#contact" role="button") Contact
+                    else
+                      li.nav-item: a.fw-bold(class="nav-link" href=`#${elementsPage[index].slice(0, 1).toLowerCase()}${elementsPage[index].slice(1)}` role="button")=elementsPage[index]
+        // End Links Right
+        // Start change color
+        section.change-color#change-color
+          article
+            .icon-color 
+              i.fa.fa-gear
+            .con-color
+              h2 Change Color
+              ul 
+                li.active(data-color="Kalam")
+                li(data-color="green")
+                li(data-color="pink")
+                li(data-color="blue")
+                li(data-color="linear")
+        // End setting color
+        // Start change Font
+        section.change-color.change-font#change-color
+          article
+            .icon-color.icon-font
+              i.fa.fa-gear
+            .con-color.font
+              h2 Change Font
+              ol 
+                li.active(data-font="kalam") Kalam
+                li(data-font="cairo") Cairo
+                li(data-font="oswald") Oswald
+                li(data-font="abril") Abril 
+                li(data-font="monda") Monda 
+                li(data-font="courgette") Courgette
+        // End change Font
+        // End main Sidebar-navbar
+
+      // Start main Content page
+      main.content.vh-100.position-absolute.end-0
+        // Start Home
+        section.container.home-box.vh-100(id=`${elementsPage[0].slice(0, 1).toLowerCase()}${elementsPage[0].slice(1)}`)
+          .fdak.position-absolute.w-75.h-75
+            img.img-fluid.lazyload(data-src="../assets/15.png")
+          .cont-kamar 
+            .kamar
+          .box-info.position-relative
+            - var namesAnimation = ["front","back","left","right","top","bottom"]
+            each name,index in namesAnimation
+              div(class="card-box position-absolute w-100 h-100 text-center p-2 " + namesAnimation[index])
+                if index == 0 
+                  h3 Full-Stack
+                else
+                  h3=elementsPage[index]
+                if index == 0
+                  img.lazyload(data-src="../assets/logo.png")
+                  .animation.position-relative.overflow-hidden
+                    span 
+                    span 
+                    span 
+                    span 
+                else if index == 5
+                  each links, index in textInfo[5]
+                    case index
+                      when 0: p= links
+                      when 1: p= links
+                      when 2: p= links
+                      when 3: a(href=links target="_blank" class="text-decoration-none") Github
+                      when 4: a(href=links target="_blank" class="px-2 text-decoration-none") Linkedin
+                      when 5: a(href=links target="_blank" class="text-decoration-none") Facebook
+                  .animation.position-relative.overflow-hidden
+                    span 
+                    span 
+                    span 
+                    span 
+                else
+                  p.text-break= textInfo[index]
+                  .animation.position-relative.overflow-hidden
+                    span 
+                    span 
+                    span 
+                    span 
+          .mockup.position-absolute.overflow-hidden
+            .cont-show-website
+              figure.position-relative
+                img.img-fluid.lazyload(data-src="../assets/mockup1.png")
+                .images-show-website.position-absolute
+                  img.img-fluid.lazyload(data-src="../assets/mockupFullScreen.png")
+              figure.position-relative
+                img.img-fluid.lazyload(data-src="../assets/mockup2.png")
+                .images-show-website.position-absolute
+                  img.img-fluid.lazyload(data-src="../assets/mockupLabtop.png")
+              figure.position-relative
+                img.img-fluid.lazyload(data-src="../assets/mockup3.png")
+                .images-show-website.position-absolute
+                  img.img-fluid.lazyload(data-src="../assets/mockupMobile.png")
+              figure.position-relative
+                img.img-fluid.lazyload(data-src="../assets/mockup4.png")
+                .images-show-website.position-absolute
+                  img.img-fluid.lazyload(data-src="../assets/mockupTalplet.png")
+
+          .type-write 
+          .count-page.h2.fw-bold Number Of Visitors To The Site
+            .con-number-counter
+              img.lazyload(data-src="../assets/chart-arrow.png")
+              .number-counter
+                h2.website-counter 20
+        // End Home Effect coverflow
+        // Start About 
+        section.main-about(id=`${elementsPage[1].slice(0, 1).toLowerCase()}${elementsPage[1].slice(1)}`)
+          .container.about.py-5.position-relative
+            .full-box-about.position-relative
+              h2.text-center.fw-bold.fs-1.mb-5.py-1 About Me
+              .row.about-1.justify-content-center.align-items-center
+                .col-md-12.col-lg-6.text-about.p-4
+                  .about-text.p-2
+                    h3.py-4.fw-bold.fs-2 I'm Taha Abdelmoneim
+                    p.lead.fw-bold full stack Developer from Giza, Egypt. I was born on July 24, 2000, I am a full stack web developer and student at El Madina Institute in Shabramant, I started learning and practicing web development in 2019, I love programming since I was young, and I work on programming almost every minute, I now have rich experience in web design, building and customization and development.
+                .col-1
+                // lazy
+                .col-md-12.col-lg-5.img-about 
+                  img.lazyload.img-fluid(data-src="../assets/02.png")
+              .row.about-2.py-5#about-2
+                .col-6.col-lg-3
+                  .about-box-text.d-flex.flex-column.justify-content-center.align-items-center
+                    .img-about.d-flex.justify-content-center.align-items-center.rounded-circle
+                      img.lazyload(class="w-50" data-src="../assets/03.png")
+                    .work-about.p-2.my-3
+                      span.fs-2(id="number-about" data-percent="82398")
+                      p.fs-2 Lines Of Code
+                .col-6.col-lg-3
+                  .about-box-text.d-flex.flex-column.justify-content-center.align-items-center
+                    .img-about.d-flex.justify-content-center.align-items-center.rounded-circle
+                      img.lazyload(class="w-50" data-src="../assets/04.png")
+                    .work-about.p-2.my-3
+                      span.fs-2(id="number-about" data-percent="22")
+                      p.fs-2 Projects Done
+                .col-6.col-lg-3
+                  .about-box-text.d-flex.flex-column.justify-content-center.align-items-center
+                    .img-about.d-flex.justify-content-center.align-items-center.rounded-circle
+                      img.lazyload(class="w-50" data-src="../assets/05.png" )
+                    .work-about.p-2.my-3
+                      span.fs-2(id="number-about" data-percent="26")
+                      p.fs-2 Happy Clients
+                .col-6.col-lg-3
+                  .about-box-text.d-flex.flex-column.justify-content-center.align-items-center
+                    .img-about.d-flex.justify-content-center.align-items-center.rounded-circle
+                      img.lazyload(class="w-50" data-src="../assets/06.png")
+                    .work-about.p-2.my-3
+                      span.fs-2(id="number-about" data-percent="35040")
+                      p.fs-2 work hours
+        // End About 
+        // Start Work Gallery 
+        section.work-gallery#gallery
+          span
+          .container.gallery.py-5
+            h2.text-center.fw-bold.fs-1.mb-5.py-1 Work Gallery
+            .swiper.mySwiper
+              .swiper-wrapper
+              .swiper-pagination
+            .row
+
+        // End Work Gallery 
+        // Start Services
+        section.services.position-relative(id=`${elementsPage[3].slice(0, 1).toLowerCase()}${elementsPage[3].slice(1)}`)
+          #particles-js
+          .container.services-box.py-5
+            h2.text-center.fw-bold.fs-1.mb-5.py-1#services-title Services
+            .row 
+              .col-12.col-md-6.col-lg-4.py-4
+                .services-info.text-center.p-2
+                  img.w-25.lazyload(data-src="../assets/07.svg")
+                  h2.p-2 SEO  
+                  p I write SEO friendly code that helps search engines find and rank your site
+              .col-12.col-md-6.col-lg-4.py-4
+                .services-info.text-center.p-2
+                  img.w-25.lazyload(data-src="../assets/08.svg")
+                  h2.p-2 Clean Code  
+                  p I write clean and organized code that makes website fast and easy to maintain
+              .col-12.col-md-6.col-lg-4.py-4
+                .services-info.text-center.p-2
+                  img.w-25.lazyload(data-src="../assets/09.svg")
+                  h2.p-2 Development  
+                  p I'm expert at developing and building any kind of websites or web applications
+              .col-12.col-md-6.col-lg-4.py-4
+                .services-info.text-center.p-2
+                  img.w-25.lazyload(data-src="../assets/10.svg")
+                  h2.p-2 Responsive Design  
+                  p I can design a 100% Responsive website compatible with all devices and platforms .
+              .col-12.col-md-6.col-lg-4.py-4
+                .services-info.text-center.p-2
+                  img.w-25.lazyload(data-src="../assets/11.svg")
+                  h2.p-2 Creative Work  
+                  p I Can Edit Your Current WebSite .. Like Color or Add A new Content To Make it Seem Better with SEO.
+              .col-12.col-md-6.col-lg-4.py-4
+                .services-info.text-center.p-2
+                  img.w-25.lazyload(data-src="../assets/12.svg")
+                  h2.p-2 Support  
+                  p Support is availble if you want any changes in your website you can ask for it anytime.
+              .col-12.col-md-6.col-lg-4.py-4
+                .services-info.text-center.p-2
+                  img.w-25.lazyload(data-src="../assets/13.png")
+                  h2.p-2 Web Idea  
+                  p I can turn your ideas to real projects with high quality and give you more ideas to make your website cool.
+              .col-12.col-md-6.col-lg-4.py-4
+                .services-info.text-center.p-2
+                  img.w-25.lazyload(data-src="../assets/14.png")
+                  h2.p-2 Retouch 
+                  p If You Have a Website And Want to Create A new Desgin For It I Can do That Easliy and In a Perfect Way.
+              .col-12.col-md-6.col-lg-4.py-4
+                .services-info.text-center.p-2
+                  img.w-25.lazyload(data-src="../assets/06.png")
+                  h2.p-2 keep Time 
+                  p I can complete your project in a short time, taking account the agreement and enough time complete project
+        // End Services
+        // Start Skills
+        section.skills.position-relative(id=`${elementsPage[4].slice(0, 1).toLowerCase()}${elementsPage[4].slice(1)}`)
+          .stars-box
+            .stars1
+            .stars2
+          .container.skills-box.py-5
+            h2.text-center.fw-bold.fs-1.mb-5.py-1 Skills
+            .row.justify-content-around
+              +skills("html", 90, 500)
+              +skills("css/3", 85, 1000)
+              +skills("JavaScript", 80, 1500)
+              +skills("sass", 90, 2000)
+              +skills("Bootstrap", 70, 2500)
+              +skills("JQuery", 85, 3000)
+              +skills("api", 90, 3500)
+              +skills("pug.js", 70, 4000)
+              +skills("webpack", 85, 4500)
+              +skills("JS(ES6, Dom, Bom)", 90, 5000)
+              +skills("json", 90, 5500)
+              +skills("ajax", 80, 6000)
+              +skills("git & github", 85, 6500)
+              +skills("react.js", 80, 7000)
+              +skills("redux", 85, 7500)
+              +skills("gulp", 80, 8000)
+              +skills("seo", 95, 8500)
+              //- +skills("svg", 80, 9000)
+              +skills("php", 90, 9500)
+              +skills("laravel", 80, 10000)
+              +skills("MySQL Database", 90, 11000)
+        // End Skills
+        // Start Contact Me
+        section.contact#contact
+            .container.contact-box.py-5.position-relative.text-center
+              h2.text-center.fw-bold.fs-1.mb-4.pt-1.mt-3 Contact Me
+              i.fa.fa-headphones.fa-5x.mb-3
+              p.mb-4 Feel Free To Contact Us Anytime
+              form.form-box.p-4.rounded-3.overflow-hidden.position-relative#form-contact
+                b(id="number-submit") 11
+                .user-box.row
+                  .input.col-12.col-lg-6.d-flex.flex-column.p-1.position-relative
+                    input.bg-transparent.mb-3(type="text" id="name" required placeholder="Name")
+                    input.bg-transparent.mb-3(type="text" id="email" required placeholder="Username")
+                    input.bg-transparent.mb-3(type="text" id="phone" required placeholder="Phone Number")
+                    select.bg-transparent(id="gender" required)
+                      option(value="" hidden)
+                      option(value="male") Male
+                      option(value="female") Female
+                    label(for="gender") Please Choose an Gender
+                    i.fa-solid.fa-circle-chevron-right
+                  .col-12.col-lg-6.p-1.textarea 
+                    textarea.bg-transparent.mb-3.w-100(id="message" required placeholder="Your Message")
+                  .col-12.submit.mt-3.text-start
+                    
+                    button.border-0.bg-transparent.position-relative.d-inline-block.p-2.fs-5.text-decoration-none.overflow-hidden#submit(type="submit") Submit
+                      span.position-absolute.d-block
+                      span.position-absolute.d-block
+                      span.position-absolute.d-block
+                      span.position-absolute.d-block
+                    
+        // End Contact Me
+        // Start Footer
+        footer
+          .container.py-1
+            .footer.mt-3
+              p.text-center.fw-bold.fs-3.mb-1 All Right Reserved &copy Copyright For Taha Abdelmoneim 2022
+        // End Footer
+        // End main Content page
+    // Start Modal  
+    .modal-website
+    // End Modal
+    // Start Full Page
+
+    include pug/includes/script

@@ -1,0 +1,253 @@
+// Start media min (767)
+@media #{$maxMobile} {
+  // Start Aside & Header
+  section.aside-nav {
+    // Start Sidebar
+    aside.sidebar {
+      width: 100%;
+      height: 92vh !important;
+      top: 59px;
+      z-index: 6;
+      overflow: hidden;
+      height: 0 !important;
+      padding: 0 !important;
+      &.open {
+        height: 92vh !important;
+      }
+      .con-nav {
+        margin-top: 10px;
+      }
+      article {
+        .logo-area {
+          figure {
+            img {
+              width: 150px !important;
+              height: 150px;
+              margin-top: -16px;
+            }
+            figcaption {
+              &::after {
+                left: 62%;
+                top: 18%;
+              }
+            }
+          }
+        }
+      }
+      .links-area {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 20px 33px;
+        padding: 0 18px;
+        a:last-child {
+          grid-column: span 2;
+        }
+        a:nth-last-child(2) {
+          line-height: 1.7;
+        }
+        a::before {
+          margin-right: 15px;
+          font-size: 20px;
+        }
+      }
+    }
+    // End Sidebar
+    // Start Header
+    header {
+      width: 100%;
+      nav {
+        .container {
+          a.navbar-brand {
+            margin: -2px !important;
+          }
+        }
+      }
+    }
+    // End Header
+    // Start Links Right
+    section.links-right {
+      .nav-right {
+        display: block !important;
+      }
+      nav {
+        right: -16px;
+        ul {
+          width: 92px;
+          li {
+            a.active {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+    // End Links Right
+  }
+  // End Aside & Header
+  // Start About
+  main.content {
+    // Start Kamar
+    .cont-kamar .kamar {
+      transform: scale(0.6);
+      left: -150px;
+      top: -71px;
+    }
+    // End Kamar
+    width: 100%;
+    .main-about {
+      margin-top: 300px;
+      .container.about {
+        .about-1 {
+          .img-about {
+            margin-top: 50px;
+          }
+          .text-about {
+            .about-text {
+              text-align: center;
+            }
+            p {
+              line-height: 1.7;
+            }
+          }
+        }
+        .row.about-2 {
+          .about-box-text {
+            .work-about {
+              p {
+                font-size: 20 !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    .container.home-box {
+      .box-info {
+        left: 48px;
+      }
+      .type-write {
+        top: 108%;
+        font-size: 20px;
+        margin-top: 30px;
+        left: 17px;
+      }
+      .count-page {
+        top: 120%;
+        font-size: 20px;
+        left: 0;
+        .con-number-counter {
+          img {
+            width: 58px;
+          }
+          .number-counter {
+            width: 60px;
+            height: 60px;
+            padding: 0;
+          }
+        }
+      }
+      .mockup {
+        position: relative !important;
+        width: 170%;
+        transform: scale(0.6);
+        left: -121px;
+        margin-top: 50px;
+        .cont-show-website {
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+  // End About
+  // Start WorkGallery
+  section.work-gallery {
+    .container.gallery {
+      .swiper-slide {
+        width: 200px;
+      }
+      h2 {
+        margin-bottom: 20px !important;
+      }
+    }
+  }
+  // End WorkGallery
+  // Start Contact Me
+  section.contact {
+    .container.contact-box {
+      form.form-box {
+        .user-box {
+          div {
+            textarea {
+              width: 100% !important;
+              height: 100% !important;
+              margin-top: 10px;
+            }
+          }
+          .submit {
+            margin-top: 22px !important;
+          }
+        }
+      }
+    }
+  }
+  // End Contact Me
+  // Start Footer
+  .footer p {
+    font-size: 12px !important;
+  }
+  // Start Footer
+  .form-switch {
+    display: block;
+  }
+}
+// End media max (767)
+
+// Start media min (768) to (992)
+@media #{$minSmall} and #{$maxMedium} {
+  // Home & About
+  main.content {
+    .container.home-box {
+      .count-page {
+        top: 120%;
+      }
+      .box-info {
+        left: 330px;
+      }
+      .type-write {
+        top: 108%;
+      }
+      .mockup {
+        width: 100%;
+        position: relative !important;
+        margin-top: 150px;
+      }
+    }
+    .main-about {
+      margin-top: 350px;
+    }
+  }
+  // Contact Me
+  section.contact {
+    .container.contact-box {
+      form.form-box {
+        .user-box {
+          div {
+            textarea {
+              height: 130%;
+              margin-top: 10px;
+            }
+          }
+          .submit {
+            margin-top: 60px !important;
+          }
+        }
+      }
+    }
+  }
+  // Footer
+  .footer {
+    p {
+      font-size: 20px !important;
+    }
+  }
+}
