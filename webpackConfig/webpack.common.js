@@ -5,7 +5,8 @@ const path = require("path"),
   webpack = require("webpack"),
   autoprefixer = require("autoprefixer"),
   miniCssExtractPlugin = require("mini-css-extract-plugin"),
-  OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+  OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin"),
+  CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   devtool: "eval-source-map",
@@ -81,6 +82,16 @@ module.exports = {
       options: {
         postcss: [autoprefixer()],
       },
+    }),
+
+    new CopyPlugin({
+      patterns: [
+        {
+          from: "src/robots.txt",
+          to: "robots.txt",
+          // noErrorOnMissing: true,
+        },
+      ],
     }),
 
     new miniCssExtractPlugin(),

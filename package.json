@@ -38,6 +38,7 @@
     "pug": "^3.0.2",
     "pug-loader": "^2.4.0",
     "style-loader": "^3.3.1",
-    "webp-loader": "^0.6.0"
+    "webp-loader": "^0.6.0",
+    "write-file-webpack-plugin": "^4.5.1"
   }
 }
