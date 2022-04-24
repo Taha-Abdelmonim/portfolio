@@ -1,6 +1,6 @@
 import "./layoutJs/images";
 import "../css/main.scss";
-import "./jquery";
+
 
 function addListenerMulti(element, eventNames, listener) {
   var events = eventNames.split(" ");
@@ -256,6 +256,7 @@ let showSkills = () => {
   });
 };
 // End Skills
+import "./jquery";
 // Start ScrollOut
 let workGallery = document.getElementById("gallery"),
   about = document.getElementById("about-2"),
@@ -426,3 +427,4 @@ inputCheck.onclick = (e) => {
     ele.setAttribute("checked", "");
   }
 };
+

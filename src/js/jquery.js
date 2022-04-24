@@ -1,5 +1,4 @@
 $(function () {
-  "use strict";
   $(".icon-toggle-sidebar").on("click", function () {
     $(".content-area, .sidebar").toggleClass("no-sidebar");
     $(".aside-nav").toggleClass("open");
@@ -61,4 +60,4 @@ $(function () {
       $(".trail").css("display", "block");
     }
   });
-});
+}); 
