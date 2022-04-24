@@ -428,9 +428,5 @@ inputCheck.onclick = (e) => {
   }
 };
 
-if (location.pathname == "/") {
-  console.log("page found");
-} else {
-  location.href = "https://portfolio--taha.web.app/404.html";
-}
+
 import "./jquery";
