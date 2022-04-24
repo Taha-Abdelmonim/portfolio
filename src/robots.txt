@@ -1,4 +1,5 @@
-User-agent: *
+User-agent: Mediapartners-Google
 Disallow:
-Sitemap: https://portfolio-taha-abdelmonim.vercel.app/sitemap.xml
+User-agent: *
 Allow: /
+Sitemap: https://portfolio-taha-abdelmonim.vercel.app/sitemap.xml
