@@ -150,7 +150,7 @@ let getRepos = () => {
           <div class="box-work-gallery position-relative">
             <i class="fa-solid fa-expand position-absolute fw-bold fs-1" data-bs-toggle='modal' data-bs-target='#${repo.name}'></i>
             <div class="overlay"></div>
-            <img class="img-fluid" src="../assets/${repo.name}.png" alt="${repo.name}">
+            <img class="img-fluid" src="./assets/${repo.name}.png" alt="${repo.name}">
             <a class="fw-bold text-decoration-none fs-5 d-block p-3" href="${repo.html_url}" title="${repo.name}" alt="${repo.name}" target="_blank">${repoName}</a>
             <div class="contact-gallery p-3 border-top d-flex justify-content-between align-items-center">
             <a class="fw-bold text-decoration-none fs-5" href="${hrefA2}" alt="Elzero" target="_blank">Show Site</a>
