@@ -83,14 +83,11 @@ module.exports = {
         postcss: [autoprefixer()],
       },
     }),
-
+    // noErrorOnMissing: true,
     new CopyPlugin({
       patterns: [
-        {
-          from: "src/robots.txt",
-          to: "robots.txt",
-          // noErrorOnMissing: true,
-        },
+        {from: "src/robots.txt",to: "robots.txt"},
+        {from: "src/sitemap.xml",to: "sitemap.xml"},
       ],
     }),
 
