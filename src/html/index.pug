@@ -48,7 +48,7 @@ html(lang="en")
             .container
               a.navbar-brand.mx-5.fw-bold(href='')
                 | Developer
-                img.ms-3.lazyload(data-src='../assets/logo.png', alt='', width='35px')
+                img.ms-3.lazyload(data-src='../assets/logo.png', alt='logo', width='35px')
               button.navbar-toggler(data-bs-toggle='collapse', data-bs-target='#navLinks')
                 span.navbar-toggler-icon
               #navLinks.collapse.navbar-collapse.text-center.links-navbar
@@ -72,7 +72,7 @@ html(lang="en")
             article.overflow-hidden
               .logo-area.text-center.mb-2.mt-4
                 figure 
-                  img.lazyload(data-src="../assets/01.jpg" alt="" class="sss img-fluid w-75 rounded-circle me-3 p-2")
+                  img.lazyload(data-src="../assets/01.jpg" alt="My Img" class="sss img-fluid w-75 rounded-circle me-3 p-2")
                   figcaption.text-nowrap.w-100.mt-4.position-relative.fw-bold.fs-4(data-text="Taha Abdelmoneim") Taha Abdelmoneim
             .links-area 
               a.text-decoration-none.fs-5.d-block(href="https://github.com/Taha-Abdelmonim" target="_blank") Github
@@ -138,7 +138,7 @@ html(lang="en")
         // Start Home
         section.container.home-box.vh-100(id=`${elementsPage[0].slice(0, 1).toLowerCase()}${elementsPage[0].slice(1)}`)
           .fdak.position-absolute.w-75.h-75
-            img.img-fluid.lazyload(data-src="../assets/15.png")
+            img.img-fluid.lazyload(data-src="../assets/15.png" alt="fdak")
           .cont-kamar 
             .kamar
           .box-info.position-relative
@@ -150,7 +150,7 @@ html(lang="en")
                 else
                   h3=elementsPage[index]
                 if index == 0
-                  img.lazyload(data-src="../assets/logo.png")
+                  img.lazyload(data-src="../assets/logo.png" alt="logo")
                   .animation.position-relative.overflow-hidden
                     span 
                     span 
@@ -180,26 +180,26 @@ html(lang="en")
           .mockup.position-absolute.overflow-hidden
             .cont-show-website
               figure.position-relative
-                img.img-fluid.lazyload(data-src="../assets/mockup1.png")
+                img.img-fluid.lazyload(data-src="../assets/mockup1.png" alt="Mockup full Screen")
                 .images-show-website.position-absolute
-                  img.img-fluid.lazyload(data-src="../assets/mockupFullScreen.png")
+                  img.img-fluid.lazyload(data-src="../assets/mockupFullScreen.png" alt="full Screen")
               figure.position-relative
-                img.img-fluid.lazyload(data-src="../assets/mockup2.png")
+                img.img-fluid.lazyload(data-src="../assets/mockup2.png" alt="Mockup laptop")
                 .images-show-website.position-absolute
-                  img.img-fluid.lazyload(data-src="../assets/mockupLabtop.png")
+                  img.img-fluid.lazyload(data-src="../assets/mockupLabtop.png" alt="Mockup laptop")
               figure.position-relative
-                img.img-fluid.lazyload(data-src="../assets/mockup3.png")
+                img.img-fluid.lazyload(data-src="../assets/mockup3.png" alt="Mockup Mobile")
                 .images-show-website.position-absolute
-                  img.img-fluid.lazyload(data-src="../assets/mockupMobile.png")
+                  img.img-fluid.lazyload(data-src="../assets/mockupMobile.png" alt="Mockup Mobile")
               figure.position-relative
-                img.img-fluid.lazyload(data-src="../assets/mockup4.png")
+                img.img-fluid.lazyload(data-src="../assets/mockup4.png" alt="Mockup tablet")
                 .images-show-website.position-absolute
-                  img.img-fluid.lazyload(data-src="../assets/mockupTalplet.png")
+                  img.img-fluid.lazyload(data-src="../assets/mockupTalplet.png" alt="Mockup tablet")
 
           .type-write 
           .count-page.h2.fw-bold Number Of Visitors To The Site
             .con-number-counter
-              img.lazyload(data-src="../assets/chart-arrow.png")
+              img.lazyload(data-src="../assets/chart-arrow.png" alt="chart-arrow")
               .number-counter
                 h2.website-counter 20
         // End Home Effect coverflow
@@ -216,33 +216,33 @@ html(lang="en")
                 .col-1
                 // lazy
                 .col-md-12.col-lg-5.img-about 
-                  img.lazyload.img-fluid(data-src="../assets/02.png")
+                  img.lazyload.img-fluid(data-src="../assets/02.png" alt="programer")
               .row.about-2.py-5#about-2
                 .col-6.col-lg-3
                   .about-box-text.d-flex.flex-column.justify-content-center.align-items-center
                     .img-about.d-flex.justify-content-center.align-items-center.rounded-circle
-                      img.lazyload(class="w-50" data-src="../assets/03.png")
+                      img.lazyload(class="w-50" data-src="../assets/03.png" alt="language")
                     .work-about.p-2.my-3
                       span.fs-2(id="number-about" data-percent="82398")
                       p.fs-2 Lines Of Code
                 .col-6.col-lg-3
                   .about-box-text.d-flex.flex-column.justify-content-center.align-items-center
                     .img-about.d-flex.justify-content-center.align-items-center.rounded-circle
-                      img.lazyload(class="w-50" data-src="../assets/04.png")
+                      img.lazyload(class="w-50" data-src="../assets/04.png" alt="light")
                     .work-about.p-2.my-3
                       span.fs-2(id="number-about" data-percent="22")
                       p.fs-2 Projects Done
                 .col-6.col-lg-3
                   .about-box-text.d-flex.flex-column.justify-content-center.align-items-center
                     .img-about.d-flex.justify-content-center.align-items-center.rounded-circle
-                      img.lazyload(class="w-50" data-src="../assets/05.png" )
+                      img.lazyload(class="w-50" data-src="../assets/05.png" alt="family")
                     .work-about.p-2.my-3
                       span.fs-2(id="number-about" data-percent="26")
                       p.fs-2 Happy Clients
                 .col-6.col-lg-3
                   .about-box-text.d-flex.flex-column.justify-content-center.align-items-center
                     .img-about.d-flex.justify-content-center.align-items-center.rounded-circle
-                      img.lazyload(class="w-50" data-src="../assets/06.png")
+                      img.lazyload(class="w-50" data-src="../assets/06.png" alt="clock")
                     .work-about.p-2.my-3
                       span.fs-2(id="number-about" data-percent="35040")
                       p.fs-2 work hours
@@ -266,47 +266,47 @@ html(lang="en")
             .row 
               .col-12.col-md-6.col-lg-4.py-4
                 .services-info.text-center.p-2
-                  img.w-25.lazyload(data-src="../assets/07.svg")
+                  img.w-25.lazyload(data-src="../assets/07.svg" alt="SEO")
                   h2.p-2 SEO  
                   p I write SEO friendly code that helps search engines find and rank your site
               .col-12.col-md-6.col-lg-4.py-4
                 .services-info.text-center.p-2
-                  img.w-25.lazyload(data-src="../assets/08.svg")
+                  img.w-25.lazyload(data-src="../assets/08.svg" alt="Clean Code")
                   h2.p-2 Clean Code  
                   p I write clean and organized code that makes website fast and easy to maintain
               .col-12.col-md-6.col-lg-4.py-4
                 .services-info.text-center.p-2
-                  img.w-25.lazyload(data-src="../assets/09.svg")
+                  img.w-25.lazyload(data-src="../assets/09.svg" alt="Development")
                   h2.p-2 Development  
                   p I'm expert at developing and building any kind of websites or web applications
               .col-12.col-md-6.col-lg-4.py-4
                 .services-info.text-center.p-2
-                  img.w-25.lazyload(data-src="../assets/10.svg")
+                  img.w-25.lazyload(data-src="../assets/10.svg" alt="Responsive Design")
                   h2.p-2 Responsive Design  
                   p I can design a 100% Responsive website compatible with all devices and platforms .
               .col-12.col-md-6.col-lg-4.py-4
                 .services-info.text-center.p-2
-                  img.w-25.lazyload(data-src="../assets/11.svg")
+                  img.w-25.lazyload(data-src="../assets/11.svg" alt="Creative Work")
                   h2.p-2 Creative Work  
                   p I Can Edit Your Current WebSite .. Like Color or Add A new Content To Make it Seem Better with SEO.
               .col-12.col-md-6.col-lg-4.py-4
                 .services-info.text-center.p-2
-                  img.w-25.lazyload(data-src="../assets/12.svg")
+                  img.w-25.lazyload(data-src="../assets/12.svg" alt="Support")
                   h2.p-2 Support  
                   p Support is availble if you want any changes in your website you can ask for it anytime.
               .col-12.col-md-6.col-lg-4.py-4
                 .services-info.text-center.p-2
-                  img.w-25.lazyload(data-src="../assets/13.png")
+                  img.w-25.lazyload(data-src="../assets/13.png" alt="Web Idea")
                   h2.p-2 Web Idea  
                   p I can turn your ideas to real projects with high quality and give you more ideas to make your website cool.
               .col-12.col-md-6.col-lg-4.py-4
                 .services-info.text-center.p-2
-                  img.w-25.lazyload(data-src="../assets/14.png")
+                  img.w-25.lazyload(data-src="../assets/14.png" alt="Retouch")
                   h2.p-2 Retouch 
                   p If You Have a Website And Want to Create A new Desgin For It I Can do That Easliy and In a Perfect Way.
               .col-12.col-md-6.col-lg-4.py-4
                 .services-info.text-center.p-2
-                  img.w-25.lazyload(data-src="../assets/06.png")
+                  img.w-25.lazyload(data-src="../assets/06.png" alt="keep Time")
                   h2.p-2 keep Time 
                   p I can complete your project in a short time, taking account the agreement and enough time complete project
         // End Services
@@ -335,7 +335,7 @@ html(lang="en")
               +skills("redux", 85, 7500)
               +skills("gulp", 80, 8000)
               +skills("seo", 95, 8500)
-              //- +skills("svg", 80, 9000)
+              +skills("svg", 80, 9000)
               +skills("php", 90, 9500)
               +skills("laravel", 80, 10000)
               +skills("MySQL Database", 90, 11000)

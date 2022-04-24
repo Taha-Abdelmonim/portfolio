@@ -150,7 +150,7 @@ let getRepos = () => {
           <div class="box-work-gallery position-relative">
             <i class="fa-solid fa-expand position-absolute fw-bold fs-1" data-bs-toggle='modal' data-bs-target='#${repo.name}'></i>
             <div class="overlay"></div>
-            <img class="img-fluid" src="../assets/${repo.name}.png" alt="Osama Elzero">
+            <img class="img-fluid" src="../assets/${repo.name}.png" alt="${repo.name}">
             <a class="fw-bold text-decoration-none fs-5 d-block p-3" href="${repo.html_url}" title="${repo.name}" alt="${repo.name}" target="_blank">${repoName}</a>
             <div class="contact-gallery p-3 border-top d-flex justify-content-between align-items-center">
             <a class="fw-bold text-decoration-none fs-5" href="${hrefA2}" alt="Elzero" target="_blank">Show Site</a>
@@ -200,7 +200,7 @@ let getRepos = () => {
       overlay[index].style.height = `${ele.clientHeight}.5px`;
       swiper.innerHTML += `
           <div class='swiper-slide'>
-            <img src="${ele.src}" />
+            <img src="${ele.src}" alt="${ele.alt}"/>
           </div>
           `;
     });
@@ -412,7 +412,7 @@ let updateVisitCount = () => {
       websiteContainer.innerHTML = res.value;
     });
 };
-updateVisitCount();
+// updateVisitCount();
 // Start Input Check
 let inputCheck = document.querySelector(".input-toggle-check");
 
