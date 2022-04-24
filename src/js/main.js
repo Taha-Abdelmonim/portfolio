@@ -1,6 +1,6 @@
 import "./layoutJs/images";
 import "../css/main.scss";
-let href = location.href;
+
 
 function addListenerMulti(element, eventNames, listener) {
   var events = eventNames.split(" ");
