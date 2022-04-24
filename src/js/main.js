@@ -256,7 +256,7 @@ let showSkills = () => {
   });
 };
 // End Skills
-import "./jquery";
+
 // Start ScrollOut
 let workGallery = document.getElementById("gallery"),
   about = document.getElementById("about-2"),
@@ -428,3 +428,4 @@ inputCheck.onclick = (e) => {
   }
 };
 
+import "./jquery";
