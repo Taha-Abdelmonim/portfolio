@@ -1,3 +1,4 @@
 User-agent: *
+Disallow:
 Sitemap: https://portfolio-taha-abdelmonim.vercel.app/sitemap.xml
 Allow: /
