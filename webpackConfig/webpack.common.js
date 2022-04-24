@@ -89,6 +89,7 @@ module.exports = {
         {from: "src/robots.txt",to: "robots.txt"},
         {from: "src/sitemap.xml",to: "sitemap.xml"},
         {from: "src/google766e914e8e3c9562.html",to: "google766e914e8e3c9562.html"},
+        {from: "src/html/404.html",to: "404.html"},
       ],
     }),
 

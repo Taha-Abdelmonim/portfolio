@@ -60,4 +60,6 @@ $(function () {
       $(".trail").css("display", "block");
     }
   });
-}); 
+
+  
+});

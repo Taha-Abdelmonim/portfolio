@@ -1,6 +1,6 @@
 import "./layoutJs/images";
 import "../css/main.scss";
-
+let href = location.href;
 
 function addListenerMulti(element, eventNames, listener) {
   var events = eventNames.split(" ");
@@ -428,4 +428,9 @@ inputCheck.onclick = (e) => {
   }
 };
 
+if (location.pathname == "/") {
+  console.log("page found");
+} else {
+  location.href = "https://portfolio--taha.web.app/404.html";
+}
 import "./jquery";
