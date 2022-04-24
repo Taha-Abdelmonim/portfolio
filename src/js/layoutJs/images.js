@@ -1,3 +1,4 @@
+import "../../assets/404.png";
 import "../../assets/01.webp";
 import "../../assets/02.png";
 import "../../assets/03.png";
