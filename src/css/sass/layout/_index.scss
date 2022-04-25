@@ -276,7 +276,7 @@ section.aside-nav {
     }
     .icon-toggle-sidebar {
       right: -44px;
-      top: 22px;
+      top: 16px;
       i {
         color: var(--main-color1);
         font-size: 26px;
@@ -644,6 +644,7 @@ main.content {
     img {
       width: 511px;
       height: 100%;
+      object-fit: cover;
     }
   }
   .cont-kamar {
@@ -856,6 +857,7 @@ main.content {
         top: -220px;
         > img {
           height: 36%;
+          object-fit: cover;
         }
         .images-show-website {
           width: 70px;
