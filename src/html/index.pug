@@ -44,13 +44,14 @@ html(lang="en")
         header
           .form-check.form-switch
             input.form-check-input.input-toggle-check(type="checkbox" role="switch" id="flexSwitchCheckChecked")
+            label(for="flexSwitchCheckChecked") `
           nav.navbar.navbar-expand-md.navbar-dark.fixed-top#navbar
             .container
               h1.d-flex.justify-content-center.align-items-center
                 a.navbar-brand.ms-5.me-3.fw-bold(href='https://portfolio--taha.web.app/')
-                  | developer
+                  | Developer
                 img.logo-img(src='./assets/logo.png', alt='logo')
-              button.navbar-toggler(data-bs-toggle='collapse', data-bs-target='#navLinks')
+              button.navbar-toggler(data-bs-toggle='collapse', data-bs-target='#navLinks' aria-label="button")
                 span.navbar-toggler-icon
               #navLinks.collapse.navbar-collapse.text-center.links-navbar
                 ul.navbar-nav.ms-auto
@@ -193,7 +194,7 @@ html(lang="en")
                 .images-show-website.position-absolute
                   img.img-fluid(src="./assets/mockupMobile.webp" alt="Mockup Mobile")
               figure.position-relative
-                img.img-fluid(src="./assets/mockup4.webp" alt="Mockup tablet")
+                img.moc4.img-fluid(src="./assets/mockup4.webp" alt="Mockup tablet")
                 .images-show-website.position-absolute
                   img.img-fluid(src="./assets/mockupTalplet.webp" alt="Mockup tablet")
 

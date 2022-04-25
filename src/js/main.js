@@ -1,5 +1,6 @@
 import "./layoutJs/images";
 import "../css/main.scss";
+import "./jquery";
 
 function addListenerMulti(element, eventNames, listener) {
   var events = eventNames.split(" ");
@@ -397,8 +398,8 @@ setAttributes(sweetalert2, {
 
 form.onsubmit = (e) => {
   e.preventDefault();
-  document.scripts[document.scripts.length - 1].before(mail);
   document.scripts[document.scripts.length - 1].before(sweetalert2);
+  document.scripts[document.scripts.length - 1].before(mail);
   setTimeout(() => {
     sendEmail();
     submit.style.cssText = "pointer-events: none; background: #ffffff8c !important";
@@ -455,7 +456,7 @@ let updateVisitCount = () => {
       websiteContainer.innerHTML = res.value;
     });
 };
-// updateVisitCount();
+updateVisitCount();
 // Start Input Check
 let inputCheck = document.querySelector(".input-toggle-check");
 
@@ -470,4 +471,4 @@ inputCheck.onclick = (e) => {
   }
 };
 
-import "./jquery";
+

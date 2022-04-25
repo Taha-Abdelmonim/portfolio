@@ -811,9 +811,11 @@ main.content {
         margin-left: 80px;
       }
       figure {
+        
         > img {
           width: 100%;
           height: 100%;
+          object-fit: cover;
         }
       }
       figure:nth-child(1) {
