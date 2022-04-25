@@ -339,6 +339,9 @@ section.aside-nav {
     }
     .links-area {
       margin-top: -10px;
+      span {
+        color: var(--main-color1);
+      }
       a {
         color: var(--main-color1);
         transition: var(--transition);
