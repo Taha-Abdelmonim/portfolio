@@ -14,6 +14,13 @@ body {
   will-change: auto;
   overflow-x: clip;
 }
+img {
+  max-width: 100%;
+}
+.logo-img {
+  width: 32px;
+  height: 32px;
+}
 .pointer {
   position: fixed;
   width: 15px;
@@ -271,7 +278,7 @@ section.aside-nav {
       right: -44px;
       top: 22px;
       i {
-        color: var(--main-color3);
+        color: var(--main-color1);
         font-size: 26px;
         transition: var(--transition);
         &:hover {
@@ -635,6 +642,7 @@ main.content {
     opacity: 0.5;
     top: 200px;
     img {
+      width: 511px;
       height: 100%;
     }
   }
@@ -695,6 +703,8 @@ main.content {
           display: block;
           margin-top: -30px;
           margin-left: 18px;
+          width: 200px;
+          height: 200px;
         }
         .animation {
           width: 320px;
@@ -796,11 +806,18 @@ main.content {
         margin-top: -23px;
         margin-left: 80px;
       }
+      figure {
+        > img {
+          width: 100%;
+          height: 100%;
+        }
+      }
       figure:nth-child(1) {
         width: 250px;
-        height: 400px;
+        height: 200px;
         left: 200px;
         top: 100px;
+
         .images-show-website {
           width: 225px;
           left: 13px;
@@ -809,14 +826,16 @@ main.content {
           top: 15px;
           img {
             animation: mockupFullScreen 30s linear infinite;
+            width: 255px;
+            height: 1587px;
           }
         }
       }
       figure:nth-child(2) {
         width: 250px;
-        height: 400px;
+        height: 168px;
         left: -18px;
-        top: -256px;
+        top: -60px;
         .images-show-website {
           width: 207px;
           left: 27px;
@@ -825,6 +844,8 @@ main.content {
           top: 15px;
           img {
             animation: mockupLaptop 30s linear infinite;
+            width: 207px;
+            height: 2737px;
           }
         }
       }
@@ -832,9 +853,9 @@ main.content {
         width: 80px;
         height: 400px;
         left: 423px;
-        top: -680px;
+        top: -220px;
         > img {
-          height: 35%;
+          height: 36%;
         }
         .images-show-website {
           width: 70px;
@@ -844,14 +865,16 @@ main.content {
           top: 15px;
           img {
             animation: mockupMobile 30s linear infinite;
+            width: 70px;
+            height: 2816px;
           }
         }
       }
       figure:nth-child(4) {
         width: 125px;
-        height: 155px;
+        height: 161px;
         left: 183px;
-        top: -1061px;
+        top: -620px;
         .images-show-website {
           width: 114px;
           left: 5px;
@@ -860,6 +883,8 @@ main.content {
           top: 4px;
           img {
             animation: mockupTablet 30s linear infinite;
+            width: 114px;
+            height: 1972px;
           }
         }
       }
@@ -886,7 +911,7 @@ main.content {
         text-align: start;
         img {
           width: 95px;
-          height: auto;
+          height: 93px;
           margin-left: 10px;
           margin-top: 6px;
           vertical-align: text-top;
@@ -1061,6 +1086,10 @@ main.content {
             height: 150px;
             box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 1);
             backdrop-filter: blur(15px);
+            img {
+              width: 100px !important;
+              height: 100px;
+            }
           }
           .work-about {
             text-align: center;
@@ -1245,6 +1274,10 @@ section.services {
         box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 1);
         border-radius: 6px;
         overflow: hidden;
+        img {
+          width: 50px !important;
+          height: 50px;
+        }
       }
       h2 {
         color: var(--main-color1);

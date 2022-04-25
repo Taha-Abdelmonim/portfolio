@@ -44,7 +44,7 @@ module.exports = {
         use: ["babel-loader"],
       },
       {
-        test: /\.(png|jpg|ico|webp|woff(2)?|ttf|otf|eot|svg)$/,
+        test: /\.(png|jpg|jpeg|ico|webp|woff(2)?|ttf|otf|eot|svg)$/,
         type: "asset/resource",
         use: [
           {

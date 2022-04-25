@@ -48,8 +48,8 @@ html(lang="en")
           nav.navbar.navbar-expand-md.navbar-dark.fixed-top#navbar
             .container
               a.navbar-brand.mx-5.fw-bold(href='')
-                | developer
-                img.ms-3.lazyload(data-src='./assets/logo.png', alt='logo', width='35px')
+                | Developer
+                img.logo-img.ms-3(src='./assets/logo.png', alt='logo')
               button.navbar-toggler(data-bs-toggle='collapse', data-bs-target='#navLinks')
                 span.navbar-toggler-icon
               #navLinks.collapse.navbar-collapse.text-center.links-navbar
@@ -73,7 +73,7 @@ html(lang="en")
             article.overflow-hidden
               .logo-area.text-center.mb-2.mt-4
                 figure 
-                  img.lazyload(data-src="./assets/01.webp" alt="My Img" class="img-fluid w-75 rounded-circle me-3 p-2")
+                  img(src="./assets/01.webp" alt="My Img" class="img-fluid w-75 rounded-circle me-3 p-2")
                   figcaption.text-nowrap.w-100.mt-4.position-relative.fw-bold.fs-4(data-text="Taha Abdelmoneim") Taha Abdelmoneim
             .links-area 
               a.text-decoration-none.fs-5.d-block(href="https://github.com/Taha-Abdelmonim" target="_blank") Github
@@ -139,7 +139,7 @@ html(lang="en")
         // Start Home
         section.container.home-box.vh-100(id=`${elementsPage[0].slice(0, 1).toLowerCase()}${elementsPage[0].slice(1)}`)
           .fdak.position-absolute.w-75.h-75
-            img.img-fluid.lazyload(data-src="./assets/15.png" alt="fdak")
+            img.img-fluid(src="./assets/15.png" alt="fdak") 
           .cont-kamar 
             .kamar
           .box-info.position-relative
@@ -151,7 +151,7 @@ html(lang="en")
                 else
                   h3=elementsPage[index]
                 if index == 0
-                  img.lazyload(data-src="./assets/logo.png" alt="logo")
+                  img(src="./assets/logo.png" alt="logo")
                   .animation.position-relative.overflow-hidden
                     span 
                     span 
@@ -181,21 +181,21 @@ html(lang="en")
           .mockup.position-absolute.overflow-hidden
             .cont-show-website
               figure.position-relative
-                img.img-fluid.lazyload(data-src="./assets/mockup1.webp" alt="Mockup full Screen")
+                img.img-fluid(src="./assets/mockup1.webp" alt="Mockup full Screen")
                 .images-show-website.position-absolute
-                  img.img-fluid.lazyload(data-src="./assets/mockupFullScreen.webp" alt="full Screen")
+                  img.img-fluid(src="./assets/mockupFullScreen.jpeg" alt="full Screen")
               figure.position-relative
-                img.img-fluid.lazyload(data-src="./assets/mockup2.png" alt="Mockup laptop")
+                img.img-fluid(src="./assets/mockup2.png" alt="Mockup laptop")
                 .images-show-website.position-absolute
-                  img.img-fluid.lazyload(data-src="./assets/mockupLabtop.webp" alt="Mockup laptop")
+                  img.img-fluid(src="./assets/mockupLabtop.webp" alt="Mockup laptop")
               figure.position-relative
-                img.img-fluid.lazyload(data-src="./assets/mockup3.webp" alt="Mockup Mobile")
+                img.img-fluid(src="./assets/mockup3.webp" alt="Mockup Mobile")
                 .images-show-website.position-absolute
-                  img.img-fluid.lazyload(data-src="./assets/mockupMobile.webp" alt="Mockup Mobile")
+                  img.img-fluid(src="./assets/mockupMobile.webp" alt="Mockup Mobile")
               figure.position-relative
-                img.img-fluid.lazyload(data-src="./assets/mockup4.webp" alt="Mockup tablet")
+                img.img-fluid(src="./assets/mockup4.webp" alt="Mockup tablet")
                 .images-show-website.position-absolute
-                  img.img-fluid.lazyload(data-src="./assets/mockupTalplet.webp" alt="Mockup tablet")
+                  img.img-fluid(src="./assets/mockupTalplet.webp" alt="Mockup tablet")
 
           .type-write 
           .count-page.h2.fw-bold Number Of Visitors To The Site

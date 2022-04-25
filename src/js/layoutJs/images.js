@@ -23,7 +23,7 @@ import "../../assets/mockup4.webp";
 import "../../assets/mockupMobile.webp";
 import "../../assets/mockupTalplet.webp";
 import "../../assets/mockupLabtop.webp";
-import "../../assets/mockupFullScreen.webp";
+import "../../assets/mockupFullScreen.jpeg";
 import "../../assets/chart-arrow.png";
 import "../../assets/img website/Admin-DashBoard.webp";
 import "../../assets/img website/Bootstrap-5-Design-02-Bondi.webp";

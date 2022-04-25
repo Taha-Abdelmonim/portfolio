@@ -1,7 +1,6 @@
 import "./layoutJs/images";
 import "../css/main.scss";
 
-
 function addListenerMulti(element, eventNames, listener) {
   var events = eventNames.split(" ");
   for (var i = 0, iLen = events.length; i < iLen; i++) {
@@ -39,22 +38,25 @@ var mousePosition,
   target = null;
 var boxInfo = document.querySelector(".box-info");
 
-["mousedown", "touchstart"].forEach(function (e) {
-  boxInfo.addEventListener(
-    e,
-    function (e) {
-      // cursor: grabbing;
-      if (e.touches) {
-        // var touch = e.touches[0];
-        target = e.touches[0].target.parentElement.parentElement;
-      }
-      boxInfo.classList.add("move");
-      isDown = true;
-      offset = [boxInfo.offsetLeft - e.clientX, boxInfo.offsetTop - e.clientY];
-    },
-    true
-  );
-});
+["mousedown", "touchstart"].forEach(
+  function (e) {
+    boxInfo.addEventListener(
+      e,
+      function (e) {
+        // cursor: grabbing;
+        if (e.touches) {
+          // var touch = e.touches[0];
+          target = e.touches[0].target.parentElement.parentElement;
+        }
+        boxInfo.classList.add("move");
+        isDown = true;
+        offset = [boxInfo.offsetLeft - e.clientX, boxInfo.offsetTop - e.clientY];
+      },
+      { passive: true }
+    );
+  },
+  { passive: true }
+);
 
 ["mouseup", "touchend"].forEach(function (e) {
   boxInfo.addEventListener(
@@ -67,7 +69,7 @@ var boxInfo = document.querySelector(".box-info");
     true
   );
 });
-boxInfo.addEventListener("touchmove", handleTouchMove, false);
+boxInfo.addEventListener("touchmove", handleTouchMove, { passive: true });
 
 function handleTouchMove(e) {
   e.stopPropagation();
@@ -131,7 +133,15 @@ let numberAboutF = () => {
 // End Number About
 // Start light services title
 let servicesTitle = document.getElementById("services-title");
+let particles = document.createElement("script");
+setAttributes(particles, {
+  src: "https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js",
+  defer: "defer",
+  async: "",
+});
+
 servicesTitle.addEventListener("click", () => {
+  document.scripts[document.scripts.length - 1].before(particles);
   import("./layoutJs/app").then(() => console.log(""));
 });
 // End light services title
@@ -273,6 +283,19 @@ let barScroll = document.querySelector(".bar-scroll"),
 buttonScroll.onclick = () => {
   window.scrollTo({ top: 0 });
 };
+
+let swiper = document.createElement("script");
+setAttributes(swiper, {
+  src: "https://unpkg.com/swiper/swiper-bundle.min.js",
+  defer: "defer",
+  async: "",
+});
+let swiperStyle = document.createElement("link");
+setAttributes(swiperStyle, {
+  href: "https://unpkg.com/swiper/swiper-bundle.min.css",
+  rel: "stylesheet",
+});
+
 window.addEventListener("scroll", () => {
   barScroll.style.cssText = `width:${Math.trunc(
     (window.pageYOffset / (document.documentElement.scrollHeight - window.outerHeight)) * 100
@@ -286,6 +309,8 @@ window.addEventListener("scroll", () => {
     workGallery.dataset.scroll == "in" &&
     workGallery.classList[workGallery.classList.length - 1] !== "in"
   ) {
+    document.head.querySelector("title").after(swiperStyle);
+    document.scripts[document.scripts.length - 1].before(swiper);
     getRepos();
     workGallery.classList.add("in");
   }
@@ -357,24 +382,41 @@ let intrvelSubmitF = () => {
     }
   }, 1000);
 };
+let mail = document.createElement("script");
+setAttributes(mail, {
+  src: "https://smtpjs.com/v3/smtp.js",
+  defer: "defer",
+  async: "",
+});
+let sweetalert2 = document.createElement("script");
+setAttributes(sweetalert2, {
+  src: "//cdn.jsdelivr.net/npm/sweetalert2@11",
+  defer: "defer",
+  async: "",
+});
 
 form.onsubmit = (e) => {
   e.preventDefault();
-  sendEmail();
-  submit.style.cssText = "pointer-events: none; background: #ffffff8c !important";
-  let spans = submit.querySelectorAll("span");
-  spans.forEach((el) => {
-    el.style.opacity = "0";
-  });
-  intrvelSubmitF();
+  document.scripts[document.scripts.length - 1].before(mail);
+  document.scripts[document.scripts.length - 1].before(sweetalert2);
   setTimeout(() => {
+    sendEmail();
+    submit.style.cssText = "pointer-events: none; background: #ffffff8c !important";
+    let spans = submit.querySelectorAll("span");
     spans.forEach((el) => {
-      el.style.opacity = "1";
+      el.style.opacity = "0";
     });
-    submit.style.cssText = "pointer-events: auto;";
-  }, 11000);
+    intrvelSubmitF();
+    setTimeout(() => {
+      spans.forEach((el) => {
+        el.style.opacity = "1";
+      });
+      submit.style.cssText = "pointer-events: auto;";
+    }, 11000);
+  }, 1000);
 };
 // End form Send mail
+// console.log(document.head)
 // Start Slider Images Projects
 let SliderImages = () => {
   var swiper = new Swiper(".mySwiper", {
@@ -427,6 +469,5 @@ inputCheck.onclick = (e) => {
     ele.setAttribute("checked", "");
   }
 };
-
 
 import "./jquery";
