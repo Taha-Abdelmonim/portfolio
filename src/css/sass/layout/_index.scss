@@ -14,6 +14,64 @@ body {
   will-change: auto;
   overflow-x: clip;
 }
+.prelouder-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  color: #ffffff;
+  z-index: 10000;
+  font-size: 2rem;
+  img {
+    width: 12%;
+    position: absolute;
+  }
+  .prelouder {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background: linear-gradient(45deg, transparent, transparent 40%, #1eb3ef);
+    animation: prelouder 2s linear infinite;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.3rem;
+      left: 0.3rem;
+      right: 0.3rem;
+      bottom: 0.3rem;
+      background-color: #000;
+      border-radius: 50%;
+      z-index: 999;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0rem;
+      left: 0rem;
+      right: 0rem;
+      bottom: 0rem;
+      background: linear-gradient(45deg, transparent, transparent 40%, #1eb3ef);
+      border-radius: 50%;
+      z-index: 1;
+      filter: blur(2rem);
+    }
+  }
+}
+@keyframes prelouder {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 img {
   max-width: 100%;
 }

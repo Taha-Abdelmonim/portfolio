@@ -1,6 +1,10 @@
 // Start media min (767)
 @media #{$maxMobile} {
   // Start Aside & Header
+  .prelouder-wrapper img {
+    width: 140px;
+    height: 140px;
+  }
   section.aside-nav {
     // Start Sidebar
     aside.sidebar {

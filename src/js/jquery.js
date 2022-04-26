@@ -60,5 +60,7 @@ $(function () {
       $(".trail").css("display", "block");
     }
   });
-  
-}); 
+  setTimeout(() => {
+    $(".prelouder-wrapper").fadeOut(1000);
+  }, 3000);
+});
