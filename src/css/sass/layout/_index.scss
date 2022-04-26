@@ -28,8 +28,11 @@ body {
   z-index: 10000;
   font-size: 2rem;
   img {
-    width: 12%;
+    width: 90%;
+    z-index: 999;
     position: absolute;
+    top: 4%;
+    left: 5%;
   }
   .prelouder {
     position: relative;

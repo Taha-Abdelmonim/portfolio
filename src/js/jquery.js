@@ -37,7 +37,7 @@ $(function () {
       }
       n += 1;
     }, 200);
-  $("body").scrollspy({ target: "#links-right" });
+  
   $("li[data-color]").on("click", function () {
     $(this).addClass("active").siblings().removeClass("active");
   });
