@@ -145,7 +145,9 @@ setAttributes(particles, {
 
 servicesTitle.addEventListener("click", () => {
   document.scripts[document.scripts.length - 1].before(particles);
-  import("./layoutJs/app").then(() => console.log(""));
+  setTimeout(() => {
+    import("./layoutJs/app").then(() => console.log(""));
+  }, 1000);
 });
 // End light services title
 // Start Get Data Fom Api
